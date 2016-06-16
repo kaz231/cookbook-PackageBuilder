@@ -1,0 +1,10 @@
+FROM debian:jessie
+
+USER root
+
+RUN apt-get install -y git ruby ruby-dev
+RUN gem install chef berkshelf nyan-cat-chef-formatter
+RUN berks install && berks vendor
+RUN chef-solo -c solo.rb -j node.json
+
+EXPOSE 80 3306
