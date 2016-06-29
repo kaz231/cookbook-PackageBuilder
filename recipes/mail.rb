@@ -15,7 +15,7 @@ template '/etc/exim4/update-exim4.conf.conf' do
 	variables({
 		'other_hostnames' => config['other_hostnames'],
 		'local_interfaces' => config['local_interfaces'],
-		'relay_domains' => config['local_interfaces']
+		'relay_domains' => config['relay_domains']
 	})
 end
 
