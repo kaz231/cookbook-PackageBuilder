@@ -20,6 +20,8 @@ default['package-builder']['local-stage'] = {
 
 default['package-builder']['required_packages'] = %w(
 	php5-curl
+	ruby
+	ruby-dev
 )
 
 default['package-builder']['required_gems'] = %w(
