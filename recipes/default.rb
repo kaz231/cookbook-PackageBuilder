@@ -21,7 +21,7 @@ config['required_packages'].each do |requiredPackage|
 	end
 end
 
-config['required_gems'] do |requiredGem|
+config['required_gems'].each do |requiredGem|
 	gem_package requiredGem do
 		action :install
 	end
