@@ -28,7 +28,7 @@ default['package-builder']['required_gems'] = %w(
 	travis
 )
 
-default['[package-builder']['mail'] = {
+default['package-builder']['mail'] = {
 	'other_hostnames' => 'pb',
 	'local_interfaces' => '127.0.0.1 ; ::1',
 	'relay_domains' => 'piwik.pro'
