@@ -30,3 +30,5 @@ end
 if config['local-stage']['setup-stage-container']
 	include_recipe 'package-builder::stage-container'
 end
+
+include_recipe 'package-builder::mail'
