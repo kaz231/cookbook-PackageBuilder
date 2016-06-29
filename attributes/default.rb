@@ -17,3 +17,11 @@ default['package-builder']['local-stage'] = {
 	'user' => 'vagrant',
 	'ip' => '192.168.16.40'
 }
+
+default['package-builder']['required_packages'] = %w(
+	php5-curl
+)
+
+default['package-builder']['required_gems'] = %w(
+	travis
+)

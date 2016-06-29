@@ -13,10 +13,20 @@ include_recipe 'php'
 include_recipe 'git'
 include_recipe 'composer'
 
-package 'php5-curl' do
-	action :install
+config = node['package-builder']
+
+config['required_packages'].each do |requiredPackage|
+	package requiredPackage do
+		action :install
+	end
 end
 
-if node['package-builder']['local-stage']['setup-stage-container']
+config['required_gems'] do |requiredGem|
+	gem_package requiredGem do
+		action :install
+	end
+end
+
+if config['local-stage']['setup-stage-container']
 	include_recipe 'package-builder::stage-container'
 end
