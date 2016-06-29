@@ -1,10 +1,10 @@
 # package-builder-cookbook
 
-TODO: Enter the cookbook description here.
+Creates environment for Piwik PRO PackageBuilder
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- debian 8.2 (Jessie)
 
 ## Attributes
 
@@ -16,10 +16,10 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['package-builder']['bacon']</tt></td>
+    <td><tt>['package-builder']['local-stage']['setup-stage-container']</tt></td>
     <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td>whether to setup local stage</td>
+    <td><tt>false</tt></td>
   </tr>
 </table>
 
@@ -39,4 +39,4 @@ Include `package-builder` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Kamil Zajac (kamil@piwik.pro)
